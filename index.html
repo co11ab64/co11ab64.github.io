@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A page to be embed</title>
 </head>
-<body>
-    <h1>Commits from VS Code</h1>
+
+<body style="background-color: DodgerBlue">
+    <h2>Message from App: </h2>
+    <p id="msg" style="color: white; font-size: 10em; text-align: center;"> </p>
+    <script type="text/javascript">
+        window.addEventListener("message", function (event) {
+            document.getElementById("msg").innerHTML = event.data;
+        });
+    </script>
 </body>
+
 </html>
